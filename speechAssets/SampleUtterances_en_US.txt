@@ -1,4 +1,15 @@
 GetNewFactIntent a fact
 GetNewFactIntent tell me a fact
 GetNewFactIntent give me a fact
+GetNewFactIntent tell me something
 GetNewFactIntent give me something
+GetNewFactIntent tell me something interesting
+GetNewFactIntent give me something interesting
+GetNewFactIntent fact
+GetNewFactIntent pass me a fact
+GetNewFactIntent pass me something
+GetNewFactIntent pass me something interesting
+GetNewFactIntent teach me something
+GetNewFactIntent teach me something new
+GetNewFactIntent i want to learn
+GetNewFactIntent i want to learn something
