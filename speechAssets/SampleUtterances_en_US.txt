@@ -13,3 +13,18 @@ GetNewFactIntent teach me something
 GetNewFactIntent teach me something new
 GetNewFactIntent i want to learn
 GetNewFactIntent i want to learn something
+GetNewYearFactIntent a fact from the year {FACT_YEAR}
+GetNewYearFactIntent tell me a fact from the year {FACT_YEAR}
+GetNewYearFactIntent give me a fact from the year {FACT_YEAR}
+GetNewYearFactIntent tell me something from {FACT_YEAR}
+GetNewYearFactIntent give me something from {FACT_YEAR}
+GetNewYearFactIntent tell me something interesting from {FACT_YEAR}
+GetNewYearFactIntent give me something interesting from {FACT_YEAR}
+GetNewYearFactIntent fact from the year {FACT_YEAR}
+GetNewYearFactIntent pass me a fact from the year {FACT_YEAR}
+GetNewYearFactIntent pass me something from {FACT_YEAR}
+GetNewYearFactIntent pass me something interesting from {FACT_YEAR}
+GetNewYearFactIntent teach me something from {FACT_YEAR}
+GetNewYearFactIntent teach me something new from {FACT_YEAR}
+GetNewYearFactIntent i want to learn from {FACT_YEAR}
+GetNewYearFactIntent i want to learn something from the year {FACT_YEAR}
