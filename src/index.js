@@ -7,7 +7,8 @@ var GET_FACT_MSG_EN = [
     "Your fact is: ",
     "The following is a fact: ",
     "Did you know: ",
-    "Providing your fact: "
+    "Providing your fact: ",
+    "I'll provide you the fact: "
 ]
 // Test hooks - do not remove!
 exports.GetFactMsg = GET_FACT_MSG_EN;
@@ -20,11 +21,15 @@ var APP_ID_TEST = "mochatest";  // used for mocha tests to prevent warning
 var GET_FACT_MSG_YEAR_EN = [
     "Here's your fact from the year " + this.year + "is: ",
     "Your fact from the year " + this.year + "is: ",
+    "The following is a fact from the year " + this.year + ": ",
+    "Did you know in the year " + this.year + ": ",
+    "Providing your fact from the year " + this.year + ": ",
+    "I'll provide you with a fact from the year " + this.year + ": "
 ]
 
 var REPROMPT_MSG = [
-    "If you would like another fact please ask: ",
-    "Would you like another fact: "
+    "If you would like another fact please ask again ",
+    "Ask again for another fact. "
 ]
 
 var languageStrings = {
@@ -83,8 +88,8 @@ var handlers = {
         var randomFact = randomPhrase(factArr);
 
         // Create speech output
-        var speechOutput = this.t(randomPhrase("GET_FACT_MESSAGE")) + randomFact;
-        this.emit(':askWithCard', speechOutput, this.t("SKILL_NAME"), randomFact, this.t(randomPhrase("REPROMPT_MESSAGE")))
+        var speechOutput = randomPhrase(this.t("GET_FACT_MESSAGE")) + randomFact;
+        this.emit(':askWithCard', speechOutput, this.t("SKILL_NAME"), randomFact, randomPhrase(this.t("REPROMPT_MESSAGE")))
     },
     'GetNewYearFactIntent': function () {
         this.emit('GetYearFact');
@@ -104,8 +109,8 @@ var handlers = {
         }
 
         // Create speech output
-        var speechOutput = this.t(randomPhrase("GET_FACT_YEAR_MESSAGE")) + chosenFact;
-        this.emit(':askWithCard', speechOutput, this.t("SKILL_NAME"), chosenFact, this.t(randomPhrase("REPROMPT_MESSAGE")))
+        var speechOutput = randomPhrase(this.t("GET_FACT_YEAR_MESSAGE")) + chosenFact;
+        this.emit(':askWithCard', speechOutput, this.t("SKILL_NAME"), chosenFact, randomPhrase(this.t("REPROMPT_MESSAGE")))
     },
     'AMAZON.HelpIntent': function () {
         var speechOutput = this.t("HELP_MESSAGE");
